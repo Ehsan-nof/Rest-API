@@ -12,6 +12,9 @@ func Register(server *gin.Engine){
 	server.PUT("/events/:id", middlewares.Authenticate,updateEvent)
 	server.DELETE("/events/:id", middlewares.Authenticate,deleteEvent)
 
+	server.POST("/events/:id/register", middlewares.Authenticate, registerForEvent)
+	server.DELETE("/events/:id/register", middlewares.Authenticate, cancelRegistration)
+
 	server.POST("/signup",signup)
 	server.POST("/login",login)
 }

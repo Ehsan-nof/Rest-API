@@ -1,7 +1,6 @@
-PUT http://localhost:8080/events/21
-content-type: application/json
-
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbGwiOiJ0ZXN0M0B0ZXN0LmNvbSIsImV4cCI6MTczNzIzMzUyOCwidXNlcklEIjozfQ.HRtQYk9vebWAa5mUHLh6q-JBGfA43cmSUQRQV2_Uyak
+PUT http://localhost:8080/events/16
+content-type:application/json
+authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbGwiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNzM3MjU2Mzk3LCJ1c2VySUQiOjJ9.-RhW6qfSgaEYySxGctgopVc-I0ZcN2plZ0neHhUcVCQ
 
 {
     "name": "updated test",
