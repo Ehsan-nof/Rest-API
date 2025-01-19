@@ -1,8 +1,9 @@
 package routes
 
-import(
+import (
 	"net/http"
 	"strconv"
+
 	"example.com/models"
 	"github.com/gin-gonic/gin"
 )
@@ -40,8 +41,8 @@ func createEvent(context *gin.Context){
         return
     }
 
-    event.ID = 1
-    event.UserID = 1
+	userId := context.GetInt64("userId")
+    event.UserID = userId
 
     err = event.Save()
 	if err != nil{
@@ -53,6 +54,7 @@ func createEvent(context *gin.Context){
 }
 
 func updateEvent(context *gin.Context){ 
+	
 	var err error
 	eventId,err := strconv.ParseInt(context.Param("id"), 10, 64)
 	if err != nil{
